@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Mau ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#090909;
+overflow-x:hidden;
+color:white;
+scroll-behavior:smooth;
+}
+
+body::-webkit-scrollbar{
+display:none;
+}
+
+.hearts{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+pointer-events:none;
+z-index:1;
+overflow:hidden;
+}
+
+.heart{
+position:absolute;
+bottom:-20px;
+color:#ff1744;
+animation:float 8s linear infinite;
+font-size:20px;
+opacity:0.7;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:0;
+}
+50%{
+opacity:1;
+}
+100%{
+transform:translateY(-100vh) rotate(360deg);
+opacity:0;
+}
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+position:relative;
+z-index:2;
+background:
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
+url('https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=1200&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+animation:fadeIn 2s ease;
+}
+
+.hero h1{
+font-size:4rem;
+color:#ffd700;
+text-shadow:0 0 20px #ffd700;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.3rem;
+color:#eee;
+margin-bottom:40px;
+line-height:2rem;
+}
+
+.btn{
+padding:15px 40px;
+border:none;
+border-radius:50px;
+background:linear-gradient(45deg,#ff1744,#ff9100);
+color:white;
+font-size:1rem;
+cursor:pointer;
+transition:0.4s;
+box-shadow:0 0 20px rgba(255,0,80,0.5);
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+.section{
+padding:80px 20px;
+position:relative;
+z-index:2;
+}
+
+.title{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:50px;
+color:#ffd700;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1200px;
+margin:auto;
+}
+
+.gallery img{
+width:100%;
+height:400px;
+object-fit:cover;
+border-radius:25px;
+transition:0.5s;
+border:3px solid rgba(255,215,0,0.3);
+box-shadow:0 0 20px rgba(255,215,0,0.15);
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.letter{
+max-width:900px;
+margin:auto;
+padding:40px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+border-radius:30px;
+line-height:2.2rem;
+font-size:1.1rem;
+box-shadow:0 0 30px rgba(255,255,255,0.05);
+}
+
+.timeline{
+max-width:800px;
+margin:auto;
+position:relative;
+}
+
+.timeline::before{
+content:'';
+position:absolute;
+left:50%;
+width:4px;
+height:100%;
+background:#ffd700;
+transform:translateX(-50%);
+}
+
+.timeline-item{
+padding:20px 40px;
+position:relative;
+width:50%;
+}
+
+.timeline-item:nth-child(odd){
+left:0;
+text-align:right;
+}
+
+.timeline-item:nth-child(even){
+left:50%;
+}
+
+.timeline-content{
+background:#111;
+padding:20px;
+border-radius:20px;
+border:1px solid rgba(255,215,0,0.2);
+box-shadow:0 0 20px rgba(255,215,0,0.1);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+max-width:1100px;
+margin:auto;
+}
+
+.card{
+background:linear-gradient(145deg,#111,#1b1b1b);
+padding:30px;
+border-radius:25px;
+text-align:center;
+border:1px solid rgba(255,215,0,0.2);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(255,215,0,0.2);
+}
+
+.final{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.9)),
+url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1200&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+}
+
+.final h1{
+font-size:4rem;
+color:#ff1744;
+text-shadow:0 0 25px #ff1744;
+margin-bottom:20px;
+}
+
+.final p{
+font-size:1.4rem;
+color:#fff;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.final h1{
+font-size:2.5rem;
+}
+
+.timeline::before{
+left:10px;
+}
+
+.timeline-item{
+width:100%;
+padding-left:40px;
+padding-right:0;
+margin-bottom:20px;
+text-align:left !important;
+left:0 !important;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="hearts"></div>
+
+<audio id="music" loop>
+<source src="song.mp3" type="audio/mp3">
+</audio>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Happy Birthday My Dear Mau ❤️</h1>
+
+<p>
+5 वर्ष... अनंत आठवणी...<br>
+आणि माझ्या आयुष्यातील सर्वात सुंदर व्यक्ती म्हणजे तू 🌸
+</p>
+
+<button class="btn" onclick="startExperience()">
+Open Your Surprise 🎁
+</button>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">आपल्या आठवणी 📸</h2>
+
+<div class="gallery">
+
+<img src="1.jpg">
+<img src="2.jpg">
+<img src="3.jpg">
+<img src="4.jpg">
+<img src="5.jpg">
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">माझ्याकडून तुझ्यासाठी 💌</h2>
+
+<div class="letter">
+
+माझ्या प्रिय Mau, ❤️<br><br>
+
+गेली 5 वर्ष तू माझ्यासोबत आहेस हे माझं सर्वात मोठं भाग्य आहे...
+तुझ्यासोबत असताना मला प्रत्येक गोष्ट सुंदर वाटते.
+तुझं हसणं, तुझं बोलणं, तुझी काळजी... सगळंच माझ्यासाठी special आहे. <br><br>
+
+कधी भांडण झाली, कधी रुसवेफुगवे झाले...
+पण प्रत्येक वेळी आपलं प्रेम अजून मजबूत झालं. ♾️ <br><br>
+
+तू फक्त माझी girlfriend नाहीस...
+तू माझं peace आहेस, माझं comfort आहेस, माझं घर आहेस. ❤️ <br><br>
+
+Happy Birthday Princess 👑<br>
+मी कायम तुझ्यासोबत राहीन.<br>
+I Love You Forever Mau ❤️
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">आपला प्रवास ⏳</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-content">
+❤️ पहिली भेट
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-content">
+🌸 पहिली long chat
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-content">
+😂 पहिलं भांडण
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-content">
+🤍 पहिली hug
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-content">
+♾️ 5 years together
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">मी तुझ्यावर प्रेम का करतो ❤️</h2>
+
+<div class="cards">
+
+<div class="card">
+तू माझी peace आहेस 🌸
+</div>
+
+<div class="card">
+तुझं हसणं माझं favourite आहे 😭❤️
+</div>
+
+<div class="card">
+तू असलीस की सगळं perfect वाटतं ✨
+</div>
+
+<div class="card">
+तू माझ्या आयुष्यातली best person आहेस 👑
+</div>
+
+</div>
+
+</section>
+
+<section class="final">
+
+<div>
+
+<h1>I Love You Forever ❤️</h1>
+
+<p>
+Happy Birthday My Dear Mau 👑
+</p>
+
+</div>
+
+</section>
+
+<script>
+
+function startExperience(){
+
+document.getElementById("music").play();
+
+window.scrollTo({
+top:window.innerHeight,
+behavior:'smooth'
+});
+
+}
+
+function createHeart(){
+
+const heart=document.createElement('div');
+
+heart.classList.add('heart');
+
+heart.innerHTML='❤';
+
+heart.style.left=Math.random()*100+'vw';
+
+heart.style.fontSize=Math.random()*20+15+'px';
+
+heart.style.animationDuration=Math.random()*3+5+'s';
+
+document.querySelector('.hearts').appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+</html>
